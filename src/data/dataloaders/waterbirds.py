@@ -80,13 +80,12 @@ class Waterbirds(BaseRealDataset):
     def get_single_class(self, cls: int) -> Tensor:
         mask = torch.isin(torch.tensor(self.full_ds.targets), torch.tensor([cls]))
         subset = torch.utils.data.Subset(self.full_ds, torch.argwhere(mask))
-
         num_samples = len(subset)
         loader = DataLoader(subset, batch_size=num_samples, num_workers=8)
         images = []
         labels = []
         print(f"Loading all {num_samples} images for class {cls}...")
-        for x, y in loader:
+        for x, y, _ in loader:
             images.append(x)
             labels.append(y)
         images = torch.cat(images)
