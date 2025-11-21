@@ -1,6 +1,6 @@
 # Dataset Distillation for Pre-Trained Self-Supervised Vision Models
 
-**[Project Page](https://linear-gradient-matching.github.io) | [arXiv](https://arxiv.org/abs/XXXX.XXXXX)**
+**[Project Page](https://linear-gradient-matching.github.io) | [arXiv](http://arxiv.org/abs/2511.16674)**
 
 [George Cazenavette](https://georgecazenavette.github.io/) · [Antonio Torralba](http://web.mit.edu/torralba/www/) · [Vincent Sitzmann](https://www.vincentsitzmann.com/)
 
@@ -13,10 +13,9 @@ Massachusetts Institute of Technology
 <p align="center">
   <img src="assets/linear_dd.png" alt="Method Overview" width="800"/>
 </p>
-We optimize our synthetic images such that they induce similar gradients as real images when training a linear classifier (W) on top of a pre-trained model (ϕ). To do this, we perform a bi-level optimization by finding the cosine distance between the real and synthetic gradients and back-propagating through the initial gradient calculation all the way to the synthetic images themselves.
-We then evaluate by training a new linear classifier from scratch on the distilled data.
 
-Please see our [Project Page](https://linear-gradient-matching.github.io) and [Paper](https://arxiv.org/abs/XXXX.XXXXX) for more details.
+We optimize our synthetic images such that they induce similar gradients as real images when training a linear classifier (W) on top of a pre-trained model (ϕ). To do this, we perform a bi-level optimization by finding the cosine distance between the real and synthetic gradients and back-propagating through the initial gradient calculation all the way to the synthetic images themselves.
+We then evaluate by training a new linear classifier from scratch on the distilled data. Please see our [Project Page](https://linear-gradient-matching.github.io) and [Paper](http://arxiv.org/abs/2511.16674) for more details.
 
 ## Installation
 
