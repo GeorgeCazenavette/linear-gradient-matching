@@ -1,0 +1,24 @@
+torch
+pandas
+torchvision
+pyarrow
+spawrious @ git+https://github.com/aengusl/spawrious.git@651e90415bfb414a5b6579cb1f53b83e6bb8c165
+tqdm
+wilds
+scipy
+pillow
+numpy
+matplotlib
+requests
+clip @ git+https://github.com/openai/CLIP.git@dcba3cb2e2827b402d2701e7e1c7d9fed8a20ef1
+timm
+transformers @ git+https://github.com/huggingface/transformers.git@242bb2cafccec9f90479f5f688bca9d240b1031f
+huggingface-hub
+einops
+wandb
+kornia
+sympy
+torchmetrics
+timm
+typed-argument-parser
+accelerate
