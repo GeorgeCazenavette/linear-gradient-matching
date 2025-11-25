@@ -354,4 +354,4 @@ if __name__ == "__main__":
     torch.save(obj=save_dict, f=save_file)
     os.remove(checkpoint_path)
 
-    print("Top 1 Mean ± Std: {:.2f} ± {:.2f}".format(top1_mean, top1_std))
+    print("Top 1 Mean ± Std: {:.2f} ± {:.2f}".format(top1_mean*100, top1_std*100))

@@ -94,7 +94,7 @@ def eval_full_dataset(cfg: FullDatasetCfg):
     print(f"Results saved to {save_path}")
     os.remove(checkpoint_path)
 
-    print("Top 1 Mean ± Std: {:.2f} ± {:.2f}", top1_mean, top1_std)
+    print("Top 1 Mean ± Std: {:.2f} ± {:.2f}".format(top1_mean*100, top1_std*100))
 
 if __name__ == "__main__":
     args = FullDatasetCfg(explicit_bool=True).parse_args()
