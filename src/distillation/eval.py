@@ -264,10 +264,14 @@ if __name__ == "__main__":
     cfg = EvalCfg(explicit_bool=True).parse_args()
 
     model_dir = os.path.join("logged_files", cfg.job_tag, cfg.dataset, cfg.model)
-    print("Searching for checkpoints in {}".format(model_dir))
+    print("Searching for saved data in {}".format(model_dir))
     syn_set_files = sorted(
         list(glob.glob(os.path.join(model_dir, "**", "data.pth"), recursive=True))
     )
+    if len(syn_set_files) == 0:
+        print(f"No data found at {model_dir}.")
+        print("Exiting...")
+        exit()
     run_dir = "/".join(syn_set_files[0].split("/")[:-1])
 
     save_dir = os.path.join(run_dir, "eval")
@@ -350,4 +354,4 @@ if __name__ == "__main__":
     torch.save(obj=save_dict, f=save_file)
     os.remove(checkpoint_path)
 
-    print("Top 1 Mean", top1_mean)
+    print("Top 1 Mean ± Std: {:.2f} ± {:.2f}".format(top1_mean, top1_std))
