@@ -18,7 +18,7 @@ class DistillCfg(Tap):
     augs_per_batch: int = 10
 
     distill_mode: Literal["pixel", "pyramid"] = "pyramid"
-    aug_mode: str = Literal["standard", "none"]
+    aug_mode: Literal["standard", "none"] = "standard"
     decorrelate_color: bool = True
 
     init_mode: Literal["noise", "zero"] = "noise"
@@ -27,8 +27,6 @@ class DistillCfg(Tap):
     pyramid_start_res: int = 1
 
     image_log_it: int = 500
-
-    do_aug: bool = True
 
     run_name: str | None = None
 
